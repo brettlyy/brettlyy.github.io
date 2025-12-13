@@ -14,7 +14,7 @@ My name is Brett Dickinson. Besides time with friends and family and cats, my fa
 
 ### My story
 
-Despite what my wife might tell you, I don't ONLY watch, talk about, play, or think about sports. These days most of my time has been working or building up my data skills through Springboard's Data Science Program.
+Despite what my wife might tell you, I don't ONLY watch, talk about, play, or think about sports. These days most of my time has been spent enjoying life with our first baby!
 
 In 2018, I graduated with a degree in accounting but had a strong feeling that accounting was not for me. I had more passion for data and analytics - so I spent my time searching for analytics (what I wanted) or finance (what I had experience in) jobs. I ended up starting my career as a financial analyst in the healthcare industry. Fast-forward 4+ years and I found myself working with data enough to scratch the itch, but also feeling like I was selling myself short of my passions.
 
