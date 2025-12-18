@@ -6,11 +6,9 @@ technologies:
   - Python
   - LangChain
   - ChromaDB
-  - Streamlit
   - HuggingFace
-live-url: "https://github.com/BrettlyCD/text-to-sql/assets/42612621/f2f59382-f283-425d-b0c4-738f7b2aee4a"
 source-url: "https://github.com/BrettlyCD/text-to-sql"
-tags: [project, sql, artificial intelligence]
+tags: [sql, artificial intelligence]
 ---
 
 Text-to-SQL Copilot is a tool to support users who see SQL databases as a barrier to actionable insights. Taking your natural language question as input, it uses a generative text model to write a SQL statement based on your data model. Then runs it on your database and analyses the results. And it does this all at no cost using HuggingFace Inference API.
@@ -50,27 +48,27 @@ The Spider dataset comes in a collection of folders containing .sqlite files. Us
 
 ### Schema Identification
 
-![Chroma and Langchain Logos - the two key tools I use in this step.](../assets/img/proj-img/langchain-chroma.png)
+![Chroma and Langchain Logos - the two key tools I use in this step.](/assets/img/proj-img/langchain-chroma.png)
 
 Something different about this approach vs. some others is that I do not use the provided target schema necessary to answer the question. In my experience, it is not always obvious which schema or table is best to find what you are looking for. Once the user inputs a question, I use the Chroma similarity search to target the schema most likely to contain the data needed to answer it.
 
 ### Language Model
 
-![HuggingFace logo - the service I use to access the language model.](../assets/img/proj-img/hugging-face.png)
+![HuggingFace logo - the service I use to access the language model.](/assets/img/proj-img/hugging-face.png)
 
 HuggingFace provides the ability to connect to some great language models in a limited, but no cost way. After some testing, I settled on building this using Google's Flan-t5-xxl model. But after running into token limits testing LangChain's SQL agent, I broke up the flow into segments calling to the LLM multiple times - to write, validation, and if necessary debug a SQL statement, and then analyze the results.
 
 ## Application Flow
 
-![Image showing the schema identification step using a vector database.](../assets/img/proj-img/copilot-id-schema.png)
+![Image showing the schema identification step using a vector database.](/assets/img/proj-img/copilot-id-schema.png)
 
 SQL Copilot heavily utilizes LangChain as a framework for interacting with the vector database and language model. The first step is to run the user question through a similarity search on a Chroma vector database that holds the information for each table and column in every database to identify where the relevant data is most likely stored.
 
-![Image showing the sql statement generation steps using the language model.](../assets/img/proj-img/copilot-generate-sql.png)
+![Image showing the sql statement generation steps using the language model.](/assets/img/proj-img/copilot-generate-sql.png)
 
 It then combines the question with the schema information and prompts the language model to write a SQL query to find the answer to the question.
 
-![Image showing the final step - running and debugging/analyzing the results.](../assets/img/proj-img/copilot-run-debug-analyze.png)
+![Image showing the final step - running and debugging/analyzing the results.](/assets/img/proj-img/copilot-run-debug-analyze.png)
 
 If that query successfully runs on the database, it will prompt the model to also answer the question using the data output. But if there is an error, it will instead prompt the model to debug and write another statement.
 
@@ -78,7 +76,7 @@ This process will run on the top 3 most likely schemas if the 1st or 2nd do not 
 
 ## Next Steps
 
-![Image showing a road ahead to represent the future path.](../assets/img/path.jpg)
+![Image showing a road ahead to represent the future path.](/assets/img/path.jpg)
 
 There are many things happening in the world of artificial intelligence and text-to-sql products. So, while I am excited for creating the first iteration of this project, it is the next steps that are the most exciting. To start, there are a few key things that could most improve the application:
 

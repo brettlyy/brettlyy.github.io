@@ -8,7 +8,7 @@ technologies:
   - Pandas
   - GeoPandas
 source-url: "https://github.com/BrettlyCD/seattle-trees-project"
-tags: [project, machine learning, modeling]
+tags: [machine learning, modeling]
 ---
 Trees play important roles in urban areas by improving air quality, regulating temperature, limiting stormwater damage, reducing noise pollution, and promoting biodiversity. They can also add beauty and provide space for community gatherings in areas often surrounded by seas of concrete.
 \
@@ -27,7 +27,7 @@ Our second climate source came from CoCoRaHS, which standard for the Community C
 \
 I broke this down into a few steps, first calculating the number of reports, applying an adjustment factor for the possibility of non- reported days having rain or not, and filling missing values with daily averages from close weather stations. I was then able to map in climate data to each tree based on the nearest station from which the data was sourced.
 \
-![Mapping individual trees to their nearest weather station.](../assets/img/proj-img/trees-mapped.png)
+![Mapping individual trees to their nearest weather station.](/assets/img/proj-img/trees-mapped.png)
 
 ## EDA & Outliers
 Our tree diameter field had me worried about outliers due to it's wide right tail so I took a look at the boxplot of all the trees and then drilled into some details.
@@ -35,12 +35,12 @@ Our tree diameter field had me worried about outliers due to it's wide right tai
 \
 **Boxplot of Diameters - All Trees**
 \
-![Boxplot of Diameter - All Trees showing a small IQR and many outliers.](../assets/img/proj-img/all-trees-box.png)
+![Boxplot of Diameter - All Trees showing a small IQR and many outliers.](/assets/img/proj-img/all-trees-box.png)
 \
 \
 **Boxplot of Diameters - Eddie's Dogwood**
 \
-![Boxplot of Diameter - Eddie's Dogwood showing a 0 IQR and many outliers.](../assets/img/proj-img/eddies-dogwood-box.png)
+![Boxplot of Diameter - Eddie's Dogwood showing a 0 IQR and many outliers.](/assets/img/proj-img/eddies-dogwood-box.png)
 \
 \
 The aggregate boxplot gave me a more powerful representation of our tailed data. But it was getting into the detail by species that I realized many records had identical diameters. It's possible the large scale of the data required some generalization/binning over precise measurements.
@@ -50,7 +50,7 @@ I like to use a 1.5X IQR definition for flagging outliers, but this binning made
 To close out my EDA, I plotted a correlation matrix. Unfortunately I did not find an exciting correlation. Instead, just the covariance from some of the climate data I pulled into the analysis. I dropped the duplicative values, leaving me with a final tally of 158,004 rows and 11 columns.
 \
 \
-![Correlation Matrix showing no much correlation, but some covariance that needed to be addressed.](../assets/img/proj-img/corr-matrix.png)
+![Correlation Matrix showing no much correlation, but some covariance that needed to be addressed.](/assets/img/proj-img/corr-matrix.png)
 
 ## Preprocessing & Training
 Having this many records proved to be slow when fitting models, so I sampled down to 10,000 records to start. After some trial and error I settled to a few consistent pre-processing steps:
@@ -68,7 +68,7 @@ project but will need some tweaking before scaling more.
 First tests of models on my training data gave a decent accuracy, but due to having imbalanced classes they were completely ignoring the small classes.
 \
 \
-![Showing balance of classes skewing heavily to a the 'Good' category.](../assets/img/proj-img/class-balance.png)
+![Showing balance of classes skewing heavily to a the 'Good' category.](/assets/img/proj-img/class-balance.png)
 \
 \
 To address this imbalance, I used a Synthetic Minority Oversampling Technique (SMOTE) function called SMOTENC which takes in categorical features. This gave me an equal numbers of records in each class for training purposes and I was ready to tune a model.
@@ -77,7 +77,7 @@ To address this imbalance, I used a Synthetic Minority Oversampling Technique (S
 After doing some practice training with a logistic regression model, I created a loop that tested cookie cutters of a few different classification models with KFold cross-validation to see which had the most promising results. With this, I decided to invest my time in a Random Forest Classifier model.
 \
 \
-![Results of different model tests showing Random Forest Classifier to be the best option.](../assets/img/proj-img/model-types.png)
+![Results of different model tests showing Random Forest Classifier to be the best option.](/assets/img/proj-img/model-types.png)
 
 ### Model Tuning
 
@@ -95,7 +95,7 @@ In an effort to generalize better to new data, I trimmed the tree down to a max 
 As a final check I graphed a learning curve to see if I should use a larger sample.
 \
 \
-![Learning curve showing more data would be beneficial to the model.](../assets/img/proj-img/learning-curve.png)
+![Learning curve showing more data would be beneficial to the model.](/assets/img/proj-img/learning-curve.png)
 \
 \
 With more data, my final model returned a test set accuracy of 0.59 and macro F1 of 0.42. It's likely even more data would help. But to not burn out my computer, I stuck with 20,000.
@@ -117,7 +117,7 @@ On the 1-5 scale, the values correspond to:
 At this scale, I flagged 1s and 2s as "at risk." I then add 25 years to each tree's age, and leaving all else equal, predicted at-risk trees in 2048.
 \
 \
-![Comparison of actual vs. 25-year prediction of at-risk trees showing a higher density of at-risk in the future](../assets/img/proj-img/at-risk.png)
+![Comparison of actual vs. 25-year prediction of at-risk trees showing a higher density of at-risk in the future](/assets/img/proj-img/at-risk.png)
 \
 \
 You can see the higher density in the colors. Assuming no changes in climate, our at-risk % goes from 7.01% to 13.73%. Of course we know climates are changing, so let's apply that fact to our model.
@@ -130,7 +130,7 @@ I made the following climate changes (on top of the 25-year fast forward):
 - Average long-term average rainfall: +8%
 \
 \
-![Bar graph showing changes from actual to prediction by % of total for each class.](../assets/img/proj-img/prediction-delta.png)
+![Bar graph showing changes from actual to prediction by % of total for each class.](/assets/img/proj-img/prediction-delta.png)
 \
 \
 If these general climate prediction hold true, we could actually see some species of trees thriving more than they are now. Others, however will shift to the at-risk categories. This leads to the question of what types of trees are most at risk. We can answer this question by using the same model, but breaking out the details by type of tree.
@@ -140,8 +140,8 @@ If these general climate prediction hold true, we could actually see some specie
 Limiting to only species with >50 occurrences, our most at-risk tree is the Cascade Snow Cherry, which is predicted to drop from a 4.0 to a 1.0 (good to dead/dying). But this is just one example, and it got me wondering if whether the tree is native or not will help its chances as the years go by and the climate changes.
 \
 \
-![Bar graph showing the average condition change from actual to predicted by native status.](../assets/img/proj-img/native-graph.png)
-![Table with full data behind the above graph.](../assets/img/proj-img/native-table.png)
+![Bar graph showing the average condition change from actual to predicted by native status.](/assets/img/proj-img/native-graph.png)
+![Table with full data behind the above graph.](/assets/img/proj-img/native-table.png)
 
 ## Future Steps
 
