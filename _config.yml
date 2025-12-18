@@ -21,6 +21,7 @@ author: Brett Dickinson
 
 navbar-links:
   About Me: "aboutme"
+  Projects: "projects"
   Reading List: "readinglist"
   #Resume: "assets/pdf/cv.pdf"
 
@@ -156,8 +157,8 @@ footer-hover-col: "#EAB2A0"
 #mobile-theme-col: "#0085A1"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
-#site-css:
-#  - "/assets/css/custom-styles.css"
+site-css:
+  - "/assets/css/custom-styles.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
 #site-js:
@@ -252,6 +253,10 @@ date_format: "%B %-d, %Y"
 # Facebook App ID
 #fb_app_id: ""
 
+collections:
+  projects:
+    output: true
+
 #################################################################################
 # --- You don't need to touch anything below here (but you can if you want) --- #
 #################################################################################
@@ -276,6 +281,14 @@ defaults:
       layout: "post"
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+      comments: true
+      social-share: false
   -
     scope:
       path: "" # any file that's not a post will be a "page" layout by default

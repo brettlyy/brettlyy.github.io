@@ -1,10 +1,13 @@
 ---
-layout: post
-title: City Trees - Seattle
-subtitle: A machine learning project predicting the future health of Seattle's urban tree cover
-cover-img: /assets/img/proj-img/seattle-cover.png
-thumbnail-img: /assets/img/proj-img/seattle-cover.png
-share-img: /assets/img/proj-img/seattle-cover.png
+title: "City Trees - Seattle"
+excerpt: "A machine learning project predicting the future health of Seattle's urban tree cover"
+project-image: /assets/img/proj-img/seattle-cover.png
+technologies:
+  - Python
+  - Scikit-learn
+  - Pandas
+  - GeoPandas
+source-url: "https://github.com/BrettlyCD/seattle-trees-project"
 tags: [project, machine learning, modeling]
 ---
 Trees play important roles in urban areas by improving air quality, regulating temperature, limiting stormwater damage, reducing noise pollution, and promoting biodiversity. They can also add beauty and provide space for community gatherings in areas often surrounded by seas of concrete.

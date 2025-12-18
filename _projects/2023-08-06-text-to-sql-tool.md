@@ -1,10 +1,15 @@
 ---
-layout: post
-title: SQL Copilot
-subtitle: AI-driven text-to-sql tool
-cover-img: /assets/img/proj-img/sql-cover.jpg
-thumbnail-img: /assets/img/proj-img/sql-thumb.jpg
-share-img: /assets/img/proj-img/sql-thumb.jpg
+title: "Text-to-SQL Tool"
+excerpt: "AI-driven text-to-sql tool to support users who see SQL databases as a barrier to actionable insights."
+project-image: /assets/img/proj-img/sql-cover.jpg
+technologies:
+  - Python
+  - LangChain
+  - ChromaDB
+  - Streamlit
+  - HuggingFace
+live-url: "https://github.com/BrettlyCD/text-to-sql/assets/42612621/f2f59382-f283-425d-b0c4-738f7b2aee4a"
+source-url: "https://github.com/BrettlyCD/text-to-sql"
 tags: [project, sql, artificial intelligence]
 ---
 

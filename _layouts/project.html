@@ -1,0 +1,47 @@
+---
+layout: base
+---
+
+{% include header.html type="page" %}
+
+<main class="container-md">
+  <div class="row">
+    <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+
+      <div class="project-post">
+        
+        {% if page.project-image %}
+        <div class="text-center">
+            <img src="{{ page.project-image | relative_url }}" class="img-fluid rounded mb-4" alt="{{ page.title }}">
+        </div>
+        {% endif %}
+
+        {{ content }}
+
+        {% if page.technologies %}
+        <div class="technologies mt-4">
+          <h5>Technologies Used</h5>
+          <ul class="list-inline">
+            {% for tech in page.technologies %}
+            <li class="list-inline-item"><span class="badge badge-secondary">{{ tech }}</span></li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+        <div class="project-links mt-4">
+            {% if page.live-url %}
+            <a href="{{ page.live-url }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Live</a>
+            {% endif %}
+            {% if page.source-url %}
+            <a href="{{ page.source-url }}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Source Code</a>
+            {% endif %}
+        </div>
+
+      </div>
+
+      {% include comments.html %}
+
+    </div>
+  </div>
+</main>
