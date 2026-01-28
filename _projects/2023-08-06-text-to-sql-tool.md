@@ -7,7 +7,7 @@ technologies:
   - LangChain
   - ChromaDB
   - HuggingFace
-source-url: "https://github.com/BrettlyCD/text-to-sql"
+source-url: "https://github.com/brettlyy/text-to-sql"
 tags: [sql, artificial intelligence]
 ---
 

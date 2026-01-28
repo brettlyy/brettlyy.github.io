@@ -7,7 +7,7 @@ technologies:
   - Scikit-learn
   - Pandas
   - GeoPandas
-source-url: "https://github.com/BrettlyCD/seattle-trees-project"
+source-url: "https://github.com/brettlyy/seattle-trees-project"
 tags: [machine learning, modeling]
 ---
 Trees play important roles in urban areas by improving air quality, regulating temperature, limiting stormwater damage, reducing noise pollution, and promoting biodiversity. They can also add beauty and provide space for community gatherings in areas often surrounded by seas of concrete.
