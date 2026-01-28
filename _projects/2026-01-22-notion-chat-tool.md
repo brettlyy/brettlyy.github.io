@@ -14,7 +14,7 @@ tags: [artificial intelligence]
 
 Notion Page Chat is setup to process pages stored in your notion, save them to a vectorstore, and interact with them in a chat interface. The Notion processing is run with a custom python script and the chat interface runs with Chainlit.
 
-![Notion Chat Demo](./../assets/video/notion-chat-example.mov)
+![Notion Chat Demo](./../assets/video/notion-chat-example.mp4)
 
 ## Background
 
