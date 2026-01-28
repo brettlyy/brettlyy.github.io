@@ -14,7 +14,7 @@ tags: [artificial intelligence]
 
 Notion Page Chat is setup to process pages stored in your notion, save them to a vectorstore, and interact with them in a chat interface. The Notion processing is run with a custom python script and the chat interface runs with Chainlit.
 
-![Notion Chat Demo](./../assets/video/notion-chat-example.mp4)
+![Notion Chat Demo](https://github.com/user-attachments/assets/66860915-aec4-4e97-aeeb-1c0a4a45ea6e)
 
 ## Background
 
@@ -188,15 +188,15 @@ answer = await chain.ainvoke({})
 
 You can see the project demo at the top of this write-up, but to reiterate in more detail, launching the chainlit app first loads, adds to, or creates the vectorstore. Once this is complete the app will open in a new window running on localhost port 8000.
 
-![Image showing the chainlit launch in terminal with new chunks being added to the vectorstore](./../assets/img/proj-img/notion-chainlit-launch.png)
+![Image showing the chainlit launch in terminal with new chunks being added to the vectorstore](/assets/img/proj-img/notion-chainlit-launch.png)
 
 Once launched you can ask a question or request something about your Notion documentation. The question will be bundled with the history and context and sent as a prompt to OpenAI's API. The response will be returned when it is fully loaded.
 
-![Image showing the question and response from the OpenAI LLM.](./../assets/img/proj-img/notion-result.png)
+![Image showing the question and response from the OpenAI LLM.](/assets/img/proj-img/notion-result.png)
 
 If applicable, the related sources appear at the bottom of the response.
 
-![Image showing the source link.](./../assets/img/proj-img/notion-sources.png)
+![Image showing the source link.](/assets/img/proj-img/notion-sources.png)
 
 ## Building and Updating Thoughts
 
