@@ -5,7 +5,7 @@ permalink: /projects/
 ---
 
 <div class="row" id="project-cards">
-{% for project in site.projects %}
+{% for project in site.projects reversed %}
   <div class="col-md-6 mb-4">
     <div class="card h-100 project-card">
       {% if project.project-image %}
