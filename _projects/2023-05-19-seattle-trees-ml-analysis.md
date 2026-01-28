@@ -1,6 +1,6 @@
 ---
 title: "City Trees - Seattle"
-excerpt: "A machine learning project predicting the future health of Seattle's urban tree cover"
+excerpt: "A machine learning project predicting the future health of Seattle's urban tree cover."
 project-image: /assets/img/proj-img/seattle-cover.png
 technologies:
   - Python
