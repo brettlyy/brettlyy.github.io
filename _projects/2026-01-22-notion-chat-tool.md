@@ -1,7 +1,7 @@
 ---
 title: "Chat With Your Notion Documents"
 excerpt: "Process your Notion documentation for easy interactive chatting using OpenAI to review the documentation"
-project-image: 
+project-image: /assets/img/proj-img/searching-discovery-perforated-paper-magnifying-glass.jpg
 technologies:
   - Python
   - Langchain
