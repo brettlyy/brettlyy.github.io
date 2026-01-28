@@ -1,4 +1,4 @@
----
+no---
 title: "Chat With Your Notion Documents"
 excerpt: "Process your Notion documentation for easy interactive chatting using OpenAI to review the documentation"
 project-image: /assets/img/proj-img/searching-discovery-perforated-paper-magnifying-glass.jpg
@@ -136,7 +136,7 @@ For my implementation here, I have setup methods for handling launching the app 
 
 Once the documents are processed out of Notion and saved locally, you can launch the Chainlit chat app by running `chainlit run notion_chat.py`. 
 
-This launches the app, and part of that launch process includes setting up the Chroma database. If none is in the expected directory, it creates on and loads the embeddings via the method listed above. If new source text files have been added since the last launch it will load those.
+This launches the app, and part of that launch process includes setting up the Chroma database. If one is not already in the expected directory, it creates and loads the embeddings via the method listed above. If new source text files have been added since the last launch it will load those.
 
 #### Handling Messages
 
@@ -180,7 +180,7 @@ chain = prompt | llm | StrOutputParser()
 answer = await chain.ainvoke({})
 ```
 
-**Note:** I've also included in the output to include the source(s) pulled from the metadata, that in this case will link back to your Notion documentation.
+**Note:** I've also included in the output the source(s) pulled from the metadata, that in this case will link back to your Notion documentation.
 
 **Note:** I'm not using a streaming setup, meaning the whole response will load from OpenAI before printing the response. With streaming the response would print out as the response is generated, leading to a better user experience.
 
