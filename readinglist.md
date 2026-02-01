@@ -4,6 +4,12 @@ title: What I'm Reading
 subtitle: And my all-time favorites
 ---
 
+### Currently Reading
+
+[**_The Rise and Fall of the Third Reich: A History of Nazi Germany_**](https://www.goodreads.com/book/show/767171.The_Rise_and_Fall_of_the_Third_Reich)
+\
+William L. Shirer
+
 ### All-time Faves:
 - [**_A Thousand Splendid Suns_**](https://www.goodreads.com/book/show/128029.A_Thousand_Splendid_Suns) - Khaled Hosseini
 - [**_The Shack_**](https://www.goodreads.com/book/show/1812457.The_Shack) - William Paul Young
