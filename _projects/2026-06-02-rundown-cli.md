@@ -78,7 +78,7 @@ Just like with my inspiration, [DiffSense](https://edgeleap.github.io), Rundown 
 
 ![Shortcut flow build](/assets/img/proj-img/shortcut-detail.png)
 
-## How I Build This with AI
+## How I Built This with AI
 
 I had the idea for this earlier in the year while on paternity leave and started building in Python. Even though it was much slower, I found it really good stress relief to do the data processing manually. I did rely heavily on AI for the overall CLI logic and structure.
 
