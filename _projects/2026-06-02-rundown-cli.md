@@ -15,20 +15,26 @@ Rundown CLI brings the quick-hitting sports updates you need right to your termi
 
 ### MLB Stats and Standings
 
-Rundown currently only supports MLB data, utilizing `statsapi.mlb.com` endpoints to access key stats and info without any special credentials. Use the `standings` command to view division standings across the league. More detailed stats and game logs are key drivers of the `brief` command.
+Rundown currently only supports MLB data, utilizing `statsapi.mlb.com` endpoints to access key stats and info without any special credentials. Use the `standings` command to view division standings across the league. 
+
+![Example standings using the standings command](/assets/img/proj-img/standings-example.png)
+
+*Snippet of standings returned by running `rundown standings`*
 
 ### Save Favorite Team
 
-A `config` command allows for saving your favorite team. This will also act as the default team for daily briefs without having to specify. In the future, this functionality will allow cross-sport rundown info.
+A `config` command allows for saving your favorite team. This will also act as the default team for daily briefs without having to specify. In the future, this functionality will allow cross-sport rundown info. 
+
+If you can't remember the acronym for every team, get in line. Run the `rundown teams` to view all the teams and their acronyms.
 
 ### Tailored Daily Briefing
 
-Utilize the favorite team or flag a specific one to get a daily brief for a single team. This will highlight:
-- Standings
-- Team stats and league-wide ranking
-- Recent game log
+Utilize the favorite team or flag a specific one to get a daily brief for a single team with the `brief` command. This provides some key information and utilizes Apple Intelligence, specifically the Private Cloud Compute (PCC) model, to generate a brief summary of the team's recent performance if you don't have time to dive into the stats and game logs.
 
-The briefing also utilizes Apple Intelligence, specifically the Private Cloud Compute (PCC) model to generate a brief summary of the team's recent performance if you don't have time to dive into the stats and logs.
+![Example daily brief for the Seattle Mariners](/assets/img/proj-img/brief-example.png)
+
+*Result returned by running `rundown brief SEA`*
+
 
 ## AI Summary
 
@@ -77,6 +83,8 @@ Notice the fake teams - the simpler model was copying the example verbatim if th
 Just like with my inspiration, [DiffSense](https://edgeleap.github.io), Rundown utilizes the Apple Shortcuts app. A downloadable `.shortcut` is available in [the repo](https://codeberg.org/offspeed/rundown-cli). The `brief` command runs this passes on the generated prompt and receives the LLM response all through this shortcut.
 
 ![Shortcut flow build](/assets/img/proj-img/shortcut-detail.png)
+
+*Workflow build in the Shortcuts app*
 
 ## How I Built This with AI
 
