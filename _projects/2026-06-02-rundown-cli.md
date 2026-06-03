@@ -90,15 +90,17 @@ Just like with my inspiration, [DiffSense](https://edgeleap.github.io), Rundown 
 
 I had the idea for this earlier in the year while on paternity leave and started building in Python. Even though it was much slower, I found it really good stress relief to do the data processing manually. I did rely heavily on AI for the overall CLI logic and structure.
 
-When picking the project back up, I used Claude Code to speed up the LLM integration. Once that was working, I realized Python wasn't ideal for distributing a CLI tool — package management and virtual environments create too much friction for end users. So I used Claude Code to migrate the whole project to Go, a language I'd never written before. The migration went smoothly enough that I'd strongly consider reaching for Go earlier on a future CLI project.
+When picking the project back up, I used Claude Code to speed up the LLM integration. Once that was working, I realized Python wasn't ideal for distributing a CLI tool with package management and virtual environments creating too much friction for end users. So I used Claude Code to migrate the whole project to Go, a language I'd never written before.
 
-Throughout the build, I tried to stay hands-on rather than just accepting whatever Claude Code generated. My goal was to work faster while still understanding what the code was doing — and pushing back when things started to drift toward unnecessary complexity.
+Throughout the build, I tried to stay hands-on rather than just accepting whatever Claude Code generated. My goal was to work faster while still understanding what the code was doing and pushing back when things started to drift toward unnecessary complexity. In the end, I've learned some Go fundamentals and have this project setup well for building onto in the future.
+
+Oh, also, I wrote this writeup manually and had Claude help me fine-tune the flow a bit. :)
 
 ## A Few Other Notes
 
-The tool uses a daily caching setup to avoid hammering the MLB Stats API
+The tool uses a daily caching setup to avoid hammering the MLB Stats API.
 
-This is my first project hosted on Codeberg. I've heard plenty of frustration with GitHub from people who've been around longer than me — for now I'm enjoying trying something different, though I'll likely keep projects across both going forward
+This is my first project hosted on Codeberg. I've heard plenty of frustration with GitHub from people who've been around longer than me — for now I'm enjoying trying something different, but have not totally moved away from GitHub. This site is hosted on GitHub pages after all.
 
-I want to keep building on this: more sports, richer stats, better briefings. If you find it useful or fun, let me know — it'll motivate me to keep going!
+I want to keep building on this: more sports, richer stats, better briefings. If you find it useful or fun, let me know! It'll motivate me to keep going!
 
